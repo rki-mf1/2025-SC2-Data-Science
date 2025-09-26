@@ -10,9 +10,7 @@ Max von Kleist, Martin Hölzer, Alexia Raharinirina
 
 **Deadline**: 10.10.2025
 
-
 *The project should be worked out in groups of two or three students. Students should document their progress and present their work on Friday; 10.10.2025 to the lecturers and students. The talk should be about 30-40 min, and allowing for 10-15min of questions.*
-
 
 **a) The presentation should be uploaded via whiteboard as `Project5.pdf`, no later than the above stated deadline.**
 
@@ -39,27 +37,17 @@ This will take a few days!
 * KP.3
 * XBB.1.5
 
+Use the methods described in the Hands-on to obtain the mutation profiles of these variants and compute their cross-reactivity. 
+Plot the result in a cross-reactivit map.
 
-__R code__
-```bash
-# login
-library(outbreakinfo)
+## 3. Reproduce the Relative fitness Trends of 5 of the variants (of your choice) shown in the Figure 3 of Manuscript below: 
 
-outbreakinfo::authenticateUser()
+Manuscript: [SARS-CoV2 Evolution on a dynamic Immune landscape](https://www.nature.com/articles/s41586-024-08477-8)
 
-# get mutations for JN.1 and KP.3:
-mutations = getMutationsByLineage(pangolin_lineage="JN.1" , frequency=0.75, logInfo = FALSE)
+It does not need to look exactly the same, but you should be able to reproduce the trends.
 
-# filter for Spike:
-mutations_s <- subset(mutations, gene=="S")
-```
-
-Save the mutations as text files with each mutation in a new line. 
-
-
-3) Go to the [VASIL web-app](https://projects-raharinirina.pythonanywhere.com/vasil/FoldR_PNeut/). Upload the all mutation profiles pairwise for lineage1 and lineage2 and run the app. Compute the cross-immunization between all pairs of variants. 
-The computation will take a while.
+**NB:** the appendage `.X` refers to all daughter variants with the parent included, and the trend is re-normalized to their respective proportions (see Hints: `Project5_hints.ipynb` found [here](https://github.com/AlexiaNomena/SC2_VASIL))
 
 4) Analyze results.
 
-5) Prepare a talk to present the results & analysis
+5) Prepare a talk to present the results & analysis.
