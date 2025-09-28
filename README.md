@@ -24,11 +24,10 @@ A practical introduction to genomic surveillance using SARS-CoV-2 as an example 
 | --          | --               |
 | 10:00-10:30 | [Welcome & course intro](day-sc2-intro/README.md) |
 | 10:30-11:00 | [RKI Genomic Surveillance and SARS-CoV-2](day-sc2-intro/README.md) |
-| 11:00-12:00 | [Linux re-cap](day-welcome-linux-container-wms/linux.md) |
+| 11:00-12:00 | [Sequencing I (SARS-CoV-2)](day-sc2-seq-and-assembly/README.md) |
 | 12:00-13:00 | Lunch break |
-| 10:15-11:00 | [Sequencing (SARS-CoV-2)](day-sc2-seq-and-assembly/README.md) |
-| 14:00-14:30 | Coffee break |
-| 14:30-16:00 | [Setup & Hands-on](day-welcome-linux-container-wms/hands-on.md) |
+| 13:00-14:30 | [Sequencing II (SARS-CoV-2)](day-sc2-seq-and-assembly/README.md) |
+| 14:30-16:00 | [Linux re-cap](day-welcome-linux-container-wms/linux.md) & [Setup](day-welcome-linux-container-wms/hands-on.md) |
 | 16:00-16:15 | Wrap-up & questions |
 
 ### <a name="6"></a> Tuesday, 2025-09-30
