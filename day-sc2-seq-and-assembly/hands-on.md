@@ -350,7 +350,7 @@ We want to use `Medaka` for variant calling. `Medaka` is not in your current `wo
 
 ```bash
 # check where you are currently located and then create the medaka env in the correct path! E.g. next to the `envs/workshop` env 
-mamba create -y -p envs/medaka "medaka==1.8.0"
+mamba create -y -p envs/medaka medaka
 conda activate envs/medaka
 ```
 [Code](https://github.com/nanoporetech/medaka) 
