@@ -199,7 +199,7 @@ conda activate envs/workshop
 
 ```bash
 mkdir envs
-mamba create -y -p envs/workshop fastqc fastp nanoplot filtlong minimap2 samtools bcftools igv pangolin president snpeff bamclipper freebayes
+mamba create -y -p envs/workshop fastqc fastp nanoplot filtlong minimap2 samtools bcftools igv pangolin president snpeff bamclipper freebayes medaka
 conda activate envs/workshop
 # test
 NanoPlot --help
