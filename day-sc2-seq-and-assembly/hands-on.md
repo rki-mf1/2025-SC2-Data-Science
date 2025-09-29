@@ -361,19 +361,18 @@ __Call variants with Medaka__
 # first generate a file with information about potential variants
 # considering the used basecalling model. You should use the matching
 # model from your Dorado basecalling settings! Here we exemplarily use 
-# older R9 data. For R10 data and different accuracies, you should change the model! 
-medaka consensus --model r941_min_hac_g507 --threads 4 --chunk_len 800 --chunk_ovlp 400 minimap2-nanopore.sorted.primerclipped.bam medaka-nanopore.consensus.hdf
+# older R9 data. For R10 data and different accuracies, you should change the model!
+
+# Run inference from a trained model and alignments.
+medaka inference --model r941_min_hac_g507 --threads 4 --chunk_len 800 --chunk_ovlp 400 minimap2-nanopore.sorted.primerclipped.bam medaka-nanopore.consensus.hdf
 
 # actually call the variants
-medaka variant nCoV-2019.reference.fasta medaka-nanopore.consensus.hdf medaka-nanopore.vcf
-
-# annotate VCF with read depth info etc. so we can filter it
-medaka tools annotate medaka-nanopore.vcf nCoV-2019.reference.fasta minimap2-nanopore.sorted.primerclipped.bam medaka-nanopore.annotate.vcf
+medaka vcf medaka-nanopore.consensus.hdf nCoV-2019.reference.fasta medaka-nanopore.vcf
 ```
 
 __Important__: Always use the matching `medaka` model based on how you or others did the `Dorado` basecalling! You can check which `medaka` models are available via:
 ```bash
-medaka tools list_models | grep -v Default
+medaka tools list_models 
 ```
 
 __Task__: Compare the results from the VCF file with what you can observe via the IGV browser. Can you find the variants `medaka` called also in IGV? 
@@ -392,14 +391,14 @@ __Check and filter the VCF file__
 conda activate envs/workshop
 
 # compress the annotated VCF file (needed for the next steps)
-bgzip -f medaka-nanopore.annotate.vcf
+bgzip -f medaka-nanopore.vcf
  
 # index a TAB-delimited genome position file in bgz format 
 # and create an index file
-tabix -f -p vcf medaka-nanopore.annotate.vcf.gz
+tabix -f -p vcf medaka-nanopore.vcf.gz
 
 # generate the consensus
-bcftools consensus -f nCoV-2019.reference.fasta medaka-nanopore.annotate.vcf.gz -o consensus-nanopore.fasta
+bcftools consensus -f nCoV-2019.reference.fasta medaka-nanopore.vcf.gz -o consensus-nanopore.fasta
 
 # rename the consensus FASTA, right now the FASTA ID is still the reference
 sed -i 's/MN908947.3/Consensus-Nanopore/g' consensus-nanopore.fasta
