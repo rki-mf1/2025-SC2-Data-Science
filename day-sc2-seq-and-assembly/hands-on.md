@@ -340,7 +340,9 @@ The result is a **VCF** file, short for variant call format. A tab-separated fil
 
 ### Nanopore
 
-We want to use `Medaka` for variant calling. `Medaka` is not in your current `workshop` environment because it was conflicting with the other tools. That's why we need a separate Mamba environment for `Medaka`:
+**ATTENTION: This is only needed in case it was not possible for you to install `medaka` in the main environment together with the other tools. If you have `medaka` already in your environment, you can skip that additional installation step.**
+
+We want to use `Medaka` for variant calling. `Medaka` might not be in your current `workshop` environment because it was conflicting with the other tools. In that case, we need a separate Mamba environment for `medaka`:
 
 * Make a new environment for `medaka` 
     * `medaka` might have many dependencies that conflict 
