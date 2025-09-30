@@ -4,7 +4,7 @@ Practical course: SARS-CoV-2 Bioinformatics & Data Science
 
 Max von Kleist, Martin Hölzer
 
-# Project 5
+# Project 6
 
 ## Outbreak detection for SARS-CoV-2
 
@@ -12,7 +12,7 @@ Max von Kleist, Martin Hölzer
 
 *The project should be worked out in groups of two or three students. Students should document their progress and present their work on Friday; 10.10.2025 to the lecturers and students. The talk should be about 30-40 min, and allowing for 10-15min of questions.*
 
-**a) The presentation should be uploaded via whiteboard as `Project5.pdf`, no later than the above stated deadline.**
+**a) The presentation should be uploaded via whiteboard as `Project6.pdf`, no later than the above stated deadline.**
 
 An exemplary structure of the talk: 
 *	Title including group composition (possibly a link to the code repository)
