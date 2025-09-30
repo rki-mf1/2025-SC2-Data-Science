@@ -159,7 +159,7 @@ __Length filtering__
 # Attention! min and max length of course depend on your sequencing protocol! 
 # the example nanopore reads were sequenced with the ARTIC V1200 kit and thus
 # yield ~1.2kbp reads
-filtlong --min_length 800 --max_length 1400 $NANOPORE_SAMPLE | gzip - > clean_reads_nanopore.fastq.gz
+filtlong --min_length 800 --max_length 1400 $NANOPORE_SAMPLE | gzip > clean_reads_nanopore.fastq.gz
 
 NanoPlot -t 4 --fastq clean_reads_nanopore.fastq.gz --title "Filtered reads" --color darkslategrey --N50 --loglength -o nanoplot/clean 
 ```
