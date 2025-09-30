@@ -66,7 +66,7 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 
 # now we create a new environment and install all tools
-mamba create -y -p envs/workshop fastqc fastp nanoplot filtlong minimap2 samtools bcftools igv pangolin president snpeff bamclipper freebayes
+mamba create -y -p envs/workshop fastqc fastp nanoplot filtlong minimap2 samtools bcftools igv pangolin president snpeff bamclipper freebayes medaka
 conda activate envs/workshop
 ```
 _Note_: We skip `medaka` here because the tools has some conflicting dependencies with other tools. Thus, we will use `medaka` later in a separate `mamba` environment. 
