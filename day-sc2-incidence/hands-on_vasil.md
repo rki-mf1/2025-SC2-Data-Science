@@ -25,7 +25,7 @@ Just copy and paste the mutation profiles displayed on the outbreak.info page in
 
 ## 3a. Necessary software and packages
 
-- Please install the Anaconda Distribution on your computer https://www.anaconda.com/docs/getting-started/anaconda/install
+- Please install the Anaconda Distribution on your computer [here](https://www.anaconda.com/docs/getting-started/anaconda/install)
 - Within the Anaconda Navigator, you can install Jupyter Notebook
 - Then you can launch Jupyter Notebook, and it will show in your browser
 
@@ -33,6 +33,19 @@ Just copy and paste the mutation profiles displayed on the outbreak.info page in
 
 - You can copy and paste all the cells in `Hands_On.ipynb`into a new python file e.g.: `Hands_On.py` (within the same folder)
 - Everything should run fine with a pre-installed python 3 version
+## 3c Additional packages
+
+- From the Anaconda Navigator, you can select the section *Environments* and then create a new environment
+- Then you can add this environment as a "kernel" in Jupyter Notebook with the following code lines
+
+Install iconda [here](https://www.anaconda.com/docs/getting-started/miniconda/install#macos-linux-installation)
+
+`conda install -c anaconda ipykernel`
+
+Double-check the name of yourNewEnv with `conda env list`
+
+Copy paste the name of yourNewEnv and add it to Jupyter
+`python -m ipykernel install --user--name=yourNewEnv`
 
 ## NB:
 If there is time, we will show you how to create environments in Anaconda and use it on your Jupyter Notebook
