@@ -45,8 +45,8 @@ Install iconda [here](https://www.anaconda.com/docs/getting-started/miniconda/in
 Double-check the name of yourNewEnv with `conda env list`
 
 Copy paste the name of yourNewEnv and add it to Jupyter
-`python -m ipykernel install --user--name=yourNewEnv`
+`python -m ipykernel install --user --name=yourNewEnv`
 
 ## NB:
 If there is time, we will show you how to create environments in Anaconda and use it on your Jupyter Notebook
-If you have any installation problems, feel free to come to Arnimallee 3 Room 112 with your computer between 11 am and 4 pm
+If you have any installation problems, feel free to come to Arnimallee 3 Room 112 with your computer between 11 am and 2 pm
